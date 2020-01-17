@@ -4,7 +4,7 @@
 # found at https://www.inspec.io/docs/reference/resources/
 # This is an example test, replace it with your own test.
 
-describe port(27017) do
+describe port('0.0.0.0', 27017) do
   it { should be_listening }
 end
 

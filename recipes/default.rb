@@ -52,7 +52,7 @@ end
 
 template '/etc/mongod.conf' do
   source 'mongod.conf.erb'
-  variables bind_ip: node['mongod']['bind_ip']
+  variables bind_ip: node['mongod']['bind_ip'], listen_port: node['mongod']['port']
   notifies :restart, 'service[mongod]'
 end
 
